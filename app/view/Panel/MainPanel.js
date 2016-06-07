@@ -40,7 +40,7 @@ Ext.define('LoginApp.view.Panel.Mainpanel',{
 				position:'right', 	
 				margin : '0 4 0 0',
 				hidden : false,
-				src :'resources/images/icon16_info.png'
+				src :'resources/images/a.png'
 			},{
 				xtype : 'image',
 				height :30,
