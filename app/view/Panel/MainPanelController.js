@@ -6,18 +6,18 @@ Ext.define('LoginApp.view.Panel.MainPanelController', {
 		var me = this;
 		var EnterDetails = me.view.down('button[name = EnterDetails]');
 		var DisplayDetails = me.view.down('button[name = DisplayDetails]');
-		me.control(/*{
+		me.control({
             "button[name = DisplayDetails]": {
                 click: me.DisplayDetailsHandler
 			}
-            },*/{
+            },{
             "button[name = EnterDetails]": {
                 click: me.EnterDetailsHandler
             }
 		});
 	
 	},
-	/*DisplayDetailsHandler:function(button){
+	DisplayDetailsHandler:function(button){
 			debugger;
 			var center = Ext.getCmp('center');
 				center.add(Ext.ComponentMgr.create({
@@ -26,7 +26,7 @@ Ext.define('LoginApp.view.Panel.MainPanelController', {
 				}));
 				center.getLayout().setActiveItem('ascpanel');
 				center.remove('despanel', true);
-	}, */
+	}, 
 	EnterDetailsHandler: function(button){
 					debugger;
 					var center = Ext.getCmp('center');
