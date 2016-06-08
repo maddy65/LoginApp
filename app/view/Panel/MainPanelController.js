@@ -2,7 +2,6 @@ Ext.define('LoginApp.view.Panel.MainPanelController', {
 	extend : 'Ext.app.ViewController',
 	alias:'controller.MainPanelController',
 	init: function() {
-		debugger;
 		var me = this;
 		var EnterDetails = me.view.down('button[name = EnterDetails]');
 		var DisplayDetails = me.view.down('button[name = DisplayDetails]');
@@ -18,7 +17,6 @@ Ext.define('LoginApp.view.Panel.MainPanelController', {
 	
 	},
 	DisplayDetailsHandler:function(button){
-			debugger;
 			var center = Ext.getCmp('center');
 				center.add(Ext.ComponentMgr.create({
 					itemId: 'ascpanel',
@@ -28,7 +26,6 @@ Ext.define('LoginApp.view.Panel.MainPanelController', {
 				center.remove('despanel', true);
 	}, 
 	EnterDetailsHandler: function(button){
-					debugger;
 					var center = Ext.getCmp('center');
 					center.add(Ext.ComponentMgr.create({
 					    itemId: 'despanel',
