@@ -1,40 +1,44 @@
-Ext.define('LoginApp.view.login.Login', {
-    extend: 'Ext.window.Window',
-	requires: [
-        'LoginApp.view.login.LoginController'
-    ],
+Ext.create('LoginApp.store.login',{
+extend : 'Ext.window.Panel',
+ui : 'formnavigationbtn',
+alias: 'widget.newdatasetwindow',
+height:200,
+width:200,
+region:'center',
+bodyPadding:20,
+title:'Login Form',
+//xtype:'form',
+initComponent : function () {
+	//debugger;
+	var me = this;
+	
+	me.items = [{
+	xtype:'textfield',
+	fieldLabel:"Username",
+	name:'username'
+	},
+	{
+	xtype:'textfield',
+	fieldLabel:"Password",
+	name:'password'
+	}],
+	me.dockedItems = [{
+				xtype: 'toolbar',
+				dock: 'bottom',
+				items:[{
+					text:'Login',
+					handler:function(){
+						//debugger;
+					}
+				},
+				{
+					text:'Cancel',
+					handler:function(){
+						//debugger;
+					}
+				}]
+	}]
+			this.callParent(arguments);
+}
 
-    controller: 'LoginController',
-    bodyPadding: 10,
-    alias:  'widget.login',
-    title: 'Login Window',
-    closable: false,
-    autoShow: true,
-	layout:'fit',
-	height:200,
-	width:500,
-
-    items: {
-        xtype: 'form',
-        reference: 'form',
-        items: [{
-            xtype: 'textfield',
-            name: 'username',
-            fieldLabel: 'Username',
-            allowBlank: false
-        }, {
-            xtype: 'textfield',
-            name: 'password',
-            inputType: 'password',
-            fieldLabel: 'Password',
-            allowBlank: false
-        }],
-        buttons: [{
-            text: 'Login',
-            formBind: true,
-            listeners: {
-                click: 'onLoginClick'
-            }
-        }]
-    }
 });
