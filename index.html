@@ -6,7 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <title>app1</title>
-
+    <script type="text/javascript">
+		var isIE11 = /Trident.*rv[ :]*11\./.test(navigator.userAgent);
+		var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor); 
+		if(!isIE11 && !isChrome){
+			alert("You are accessing the system using a browser that we currently do not support. Please log in using either Internet Explorer v11 or Chrome v52.");
+		}
+		
+  </script>
     <!-- The line below must be kept intact for Sencha Cmd to build your application -->
     <script id="microloader" type="text/javascript" src="bootstrap.js"></script>
 
